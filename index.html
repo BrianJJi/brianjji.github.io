@@ -7,6 +7,7 @@
       background-color: #efe6e1;
       font-family: Garamond, serif;
       display: flex;
+      justify-content: center; /* Center align the content horizontally */
     }
     .index-column {
       width: 20%; /* Adjust the width as desired */
@@ -31,9 +32,10 @@
     text-decoration: underline;
   }
     .flexible-image {
-      width: 75%;
-      height: auto;
       max-width: 100%;
+      height: auto;
+      display: block; /* Add display: block to remove any extra space below the image */
+      margin: 0 auto; /* Center align the image horizontally */
     }
 
     .image-container {
