@@ -21,6 +21,11 @@
     .main-content {
       padding: 20px; /* Adjust the padding as desired */
       margin-top: 20px; /* Adjust the margin-top to align with index column */
+      opacity: 0; /* Initially hide the content */
+      transition: opacity 0.5s ease; /* Add a smooth transition effect */
+    }
+    .main-content.loaded {
+      opacity: 1; /* Show the content when the image is loaded */
     }
   .hover-link {
     font-size: 36px;
@@ -66,6 +71,12 @@
     }
 
   </style>
+    <script>
+    function handleImageLoad() {
+      var mainContent = document.querySelector('.main-content');
+      mainContent.classList.add('loaded'); /* Add the "loaded" class to show the content */
+    }
+  </script>
 </head>
 
 <body>
@@ -84,7 +95,7 @@
     <p style="font-size: 36px;">Investor, disciple, designer.
       <br>
       In pursuit of timeless truth.</p>
-    <img src="testing.jpg" alt="Vibe" class="flexible-image">
+    <img src="testing.webp" alt="Vibe" class="flexible-image" onload="handleImageLoad()">
 
     <!--
     <div class="image-container">
