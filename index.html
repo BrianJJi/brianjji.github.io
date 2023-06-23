@@ -8,7 +8,6 @@
       font-family: Garamond, serif;
       display: flex;
     }
-
     .index-column {
       width: 20%; /* Adjust the width as desired */
       background-color: transparent; /* Transparent background */
@@ -17,13 +16,18 @@
       margin-left: 50px;
       line-height: 2;
     }
-
     .main-content {
       padding: 20px; /* Adjust the padding as desired */
       margin-top: 20px; /* Adjust the margin-top to align with index column */
     }
+    .flexible-image {
+      width: 50%;
+      height: auto;
+      max-width: 100%;
+    }
   </style>
 </head>
+
 <body>
   <div class="index-column">
     <a href="page1.html">Page 1pp</a>
@@ -33,8 +37,8 @@
 
   <div class="main-content">
     <h1>Brian Ji</h1>
-    <p>Investor, disciple, autodidact. In pursuit of truth.p</p>
-    <img src="testing.png" alt="Vibe">
+    <p>Investor, disciple, first principled. In pursuit of timeless truth.</p>
+    <img src="testing.png" alt="Vibe" class="flexible-image">
   </div>
 </body>
 </html>
