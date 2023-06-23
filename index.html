@@ -37,17 +37,30 @@
 
     .image-container {
   position: relative;
-}
-.image-container img {
-  position: absolute;
-  top: 15;
-  left: 15;
-  z-index: 1;
-        width: 75%;
-      height: auto;
-      max-width: 100%;
+  width: 75%;
+  height: auto;
+  max-width: 100%;
 
 }
+.image-container {
+  position: relative;
+}
+    .image-container .fixed-image {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      z-index: 2;
+      width: 100%; /* Adjusted width to match container size */
+      height: auto; /* Allow height to adjust based on content */
+    }
+    .image-container .moving-image {
+      position: absolute;
+      top: 0; /* Adjust the top value to move the image vertically */
+      left: 0; /* Adjust the left value to move the image horizontally */
+      z-index: 1;
+      width: 100%; /* Adjusted width to match container size */
+      height: auto; /* Allow height to adjust based on content */
+    }
 
   </style>
 </head>
@@ -65,10 +78,13 @@
     <h1 style="font-size: 36px;">Brian Ji</h1>
     <p style="font-size: 24px;">Investor, disciple, designer. In pursuit of timeless truth.</p>
     <img src="testing.png" alt="Vibe" class="flexible-image">
+
+    <!--
     <div class="image-container">
-      <img src="testing.png" alt="Image 1">
-      <img src="testing2.jpg" alt="Image 2">
+      <img src="testing.png" alt="Image 1" class="fixed-image">
+      <img src="testing2.jpg" alt="Image 2" class="moving-image">
     </div>
+  -->
   </div>
 
 </body>
