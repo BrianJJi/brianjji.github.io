@@ -17,7 +17,13 @@
       margin-left: 50px;
       margin-right: 50px;
       line-height: 2;
+      visibility: hidden; /* Initially hide the column */
     }
+    .index-column.loaded {
+      visibility: visible; /* Show the column when the image is loaded */
+    }
+
+
     .main-content {
       padding: 20px; /* Adjust the padding as desired */
       margin-top: 20px; /* Adjust the margin-top to align with index column */
@@ -74,21 +80,15 @@
     <script>
     function handleImageLoad() {
       var mainContent = document.querySelector('.main-content');
-      mainContent.classList.add('loaded'); /* Add the "loaded" class to show the content */
+      mainContent.classList.add('loaded');
+
+      var indexColumn = document.querySelector('.index-column');
+      indexColumn.classList.add('loaded'); /* Add the "loaded" class to show the column */
     }
   </script>
 </head>
 
 <body>
-  <div class="index-column">
-    <a href="https://twitter.com/BrianJJi" class="hover-link">Twitter</a>
-    <br>
-    <a href="https://read.cv/brianji" class="hover-link">About</a>
-    <br>
-    <!--
-    <a href="page1.html">Page 1pp</a>
-    -->
-  </div>
 
   <div class="main-content">
     <h1 style="font-size: 48px;">Brian Ji</h1>
@@ -96,6 +96,13 @@
       <br>
       In pursuit of timeless truth.</p>
     <img src="testing.webp" alt="Vibe" class="flexible-image" onload="handleImageLoad()">
+  </div>
+
+    <div class="index-column loaded">
+      <a href="https://twitter.com/BrianJJi" class="hover-link">Twitter</a>
+      <br>
+      <a href="https://read.cv/brianji" class="hover-link">About</a>
+    </div>
 
     <!--
     <div class="image-container">
@@ -103,7 +110,6 @@
       <img src="testing2.jpg" alt="Image 2" class="moving-image">
     </div>
   -->
-  </div>
 
 </body>
 </html>
