@@ -12,7 +12,7 @@
       width: 20%; /* Adjust the width as desired */
       background-color: transparent; /* Transparent background */
       padding: 20px; /* Adjust the padding as desired */
-      margin-top: 90px;
+      margin-top: 98px;
       margin-left: 50px;
       line-height: 2;
     }
@@ -20,25 +20,56 @@
       padding: 20px; /* Adjust the padding as desired */
       margin-top: 20px; /* Adjust the margin-top to align with index column */
     }
+  .hover-link {
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+  }
+
+  .hover-link:hover {
+    text-decoration: underline;
+  }
     .flexible-image {
       width: 75%;
       height: auto;
       max-width: 100%;
     }
+
+    .image-container {
+  position: relative;
+}
+.image-container img {
+  position: absolute;
+  top: 15;
+  left: 15;
+  z-index: 1;
+        width: 75%;
+      height: auto;
+      max-width: 100%;
+
+}
+
   </style>
 </head>
 
 <body>
   <div class="index-column">
-    <a href="page1.html">Page 1pp</a>
+<a href="https://twitter.com/BrianJJi" class="hover-link">Twitter</a>
     <br>
+    <!--
     <a href="page1.html">Page 1pp</a>
+    -->
   </div>
 
   <div class="main-content">
     <h1 style="font-size: 36px;">Brian Ji</h1>
-    <p style="font-size: 24px;">Investor, disciple, first principled. In pursuit of timeless truth.</p>
+    <p style="font-size: 24px;">Investor, disciple, designer. In pursuit of timeless truth.</p>
     <img src="testing.png" alt="Vibe" class="flexible-image">
+    <div class="image-container">
+      <img src="testing.png" alt="Image 1">
+      <img src="testing2.jpg" alt="Image 2">
+    </div>
   </div>
+
 </body>
 </html>
