@@ -24,8 +24,14 @@
       padding: 20px; /* Adjust the padding as desired */
       margin-top: 20px; /* Adjust the margin-top to align with index column */
       opacity: 0; /* Initially hide the content */
+    }
+    .fade-in {
+      opacity: 1;
       transition: opacity 0.5s ease; /* Add a smooth transition effect */
     }
+
+          transition: opacity 0.5s ease; /* Add a smooth transition effect */
+
   .hover-link {
     font-size: 36px;
     color: grey;
@@ -83,17 +89,17 @@
     <script>
     function handleImageLoad() {
       var mainContent = document.querySelector('.main-content');
-      mainContent.style.opacity = '1'; /* Show the content when the image is loaded */
+      mainContent.classList.add('fade-in'); /* Add fade-in class to show the content */
 
       var indexColumn = document.querySelector('.index-column');
-      indexColumn.style.opacity = '1'; /* Show the content when the image is loaded */
+      indexColumn.classList.add('fade-in'); /* Add fade-in class to show the content */
     }
   </script>
 </head>
 
 <body>
 
-    <div class="index-column">
+    <div class="index-column fade-in">
       <a href="https://twitter.com/BrianJJi" class="hover-link" style="font-size: 1.5em;">Twitter</a>
       <br>
       <a href="https://www.linkedin.com/in/brianjji/" class="hover-link" style="font-size: 1.5em;">Linkedin</a>
@@ -104,7 +110,7 @@
 
     </div>
 
-  <div class="main-content">
+  <div class="main-content fade-in">
     <h1 style="font-size: 3em;">Brian Ji</h1>
     <p style="font-size: 1.8em;">Investor, disciple, architect. In pursuit of timeless truth.
     </p>
